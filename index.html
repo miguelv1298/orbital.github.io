@@ -31,14 +31,16 @@
             background-color: #d63c3c;
         }
 
+        #video-container, #text-container, #text2-container, #image-wrapper, .news-content {
+            display: none; /* Todos los elementos adicionales son invisibles por defecto */
+        }
+
         #video-container {
-            display: none;
             margin-top: 20px;
         }
 
         #text-container {
             margin: 30px;
-            display: none;
             color: white;
             font-weight: bolder;
             font-family: sans-serif;
@@ -49,7 +51,6 @@
 
         #text2-container {
             margin: 20px;
-            display: none;
             color: white;
             font-weight: bolder;
             font-family: fantasy;
@@ -58,16 +59,43 @@
             text-align: center;
         }
 
+        #image-wrapper {
+            background-color: #1b1b2f;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+
         #image-container {
-            display: none;
-            max-width: 100%;
+            width: 100%;
+            max-width: 400px; /* Reducir el tamaño de la imagen */
             height: auto;
         }
 
-        iframe {
+        .news-content {
+            color: white;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .news-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .news-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        video {
             width: 100%;
             height: auto;
-            max-width: 560px;
+            max-width: 560px; /* Tamaño máximo del video */
         }
 
         /* Estilos para pantallas pequeñas */
@@ -87,9 +115,22 @@
                 font-size: 28px;
             }
 
-            iframe {
+            #image-container {
+                max-width: 300px; /* Imagen más pequeña en móvil */
+            }
+
+            video {
                 width: 100%;
                 height: auto;
+                max-width: 720px; /* Video más grande en móvil */
+            }
+
+            .news-title {
+                font-size: 20px;
+            }
+
+            .news-description {
+                font-size: 14px;
             }
         }
 
@@ -108,6 +149,14 @@
             #text2-container {
                 font-size: 24px;
             }
+
+            .news-title {
+                font-size: 18px;
+            }
+
+            .news-description {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -115,7 +164,7 @@
 
     <img id="vini" src="247.png" alt="Imagen centrada" style="max-width: 100%; height: auto;">
     
-    <button id="button" onclick="mostrarVideo()">Fichar</button>
+    <button id="button" onclick="mostrarElementos()">Fichar</button>
     
     <div id="text-container">
         <p>FICHAME ESTA</p>
@@ -124,31 +173,46 @@
     <div id="text2-container">
         <p>WELCOME TO XVEELO F.C.</p>
     </div>
-    
-    <div>
+
+    <!-- Div con fondo gris oscuro que contiene la imagen -->
+    <div id="image-wrapper">
         <img id="image-container" src="vinirenovacion.jpg" alt="vini">
     </div>
-    
+
+    <!-- Bloque de texto tipo noticia -->
+    <div class="news-content">
+        <h2 class="news-title">Vinicius Jr. renueva su contrato con el Real Madrid</h2>
+        <p class="news-description">El astro brasileño ha firmado una extensión de contrato que lo vincula al club hasta 2028. Vinicius ha sido clave en los recientes éxitos del equipo y su futuro promete aún más grandes momentos.</p>
+    </div>
+
     <div id="video-container">
-        <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
+        <!-- Video que se reproducirá automáticamente -->
+        <video id="video" controls autoplay muted>
+            <source src="videoplayback.webm" type="video/mp4"> <!-- Reemplaza "tu_video.mp4" por el nombre de tu archivo -->
+            Tu navegador no soporta el video.
+        </video>
     </div>
 
     <script>
-        function mostrarVideo() {
+        function mostrarElementos() {
             // Mostrar los elementos adicionales
             document.getElementById('video-container').style.display = 'block';
             document.getElementById('text-container').style.display = 'block';
             document.getElementById('text2-container').style.display = 'block';
-            document.getElementById('image-container').style.display = 'block';
+            document.getElementById('image-wrapper').style.display = 'block';
+            document.querySelector('.news-content').style.display = 'block'; // Mostrar el bloque de noticia
     
             // Ocultar la imagen y el botón originales
             document.getElementById('vini').style.display = 'none';
             document.getElementById('button').style.display = 'none';
-            
-            // Establecer el video con autoplay
-            document.getElementById('video').src = "https://www.youtube.com/embed/IXKQ3xfEJgY?autoplay=1";
         }
+        
+        // Reproducir el video automáticamente al cargar la página
+        window.onload = function() {
+            document.getElementById('video').play();
+        };
     </script>
     
 </body>
 </html>
+
