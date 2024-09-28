@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con imagen, botón y video</title>
+    <title>FutLloros</title> 
     <style>
+        
         body {
             margin: 0;
             padding: 0;
@@ -37,6 +38,7 @@
 
         #video-container {
             margin-top: 20px;
+            text-align: center; /* Centrar el video */
         }
 
         #text-container {
@@ -53,12 +55,13 @@
             margin: 20px;
             color: white;
             font-weight: bolder;
-            font-family: fantasy;
             border-radius: 5px;
             font-size: 32px;
             text-align: center;
         }
-
+        *{
+            margin:10px;
+        }
         #image-wrapper {
             background-color: #1b1b20;
             padding: 10px;
@@ -97,8 +100,11 @@
             width: 100%;
             height: auto;
             max-width: 800px; /* Tamaño máximo del video */
+            display: block; /* Hacer que el video sea un bloque */
+            margin: 20px auto; /* Margen superior e inferior */
         }
-        #tilt{
+        
+        #tilt {
             margin: 10px;
             color: white;
             font-weight: bolder;
@@ -142,7 +148,6 @@
                 font-size: 14px;
             }
         }
-        
 
         @media (max-width: 480px) {
             button {
@@ -187,14 +192,12 @@
     <!-- Div con fondo gris oscuro que contiene la imagen -->
     <div id="image-wrapper">
         <img id="image-container" src="vinirenovacion.jpg" alt="vini">
-         <!-- Bloque de texto tipo noticia -->
-    <div class="news-content">
-        <h2 class="news-title">Vinicius Jr. ficha por xVeelo</h2>
-        <p class="news-description">El astro brasileño ha firmado el contrato que lo vincula al club hasta 2028. Fuentes cercanas al jugador confirman su rechazo al tecnico Edgar "Bigotudo" Santana asi como al sevillano Roberto "SinRazon" Mollet.</p>
+        <!-- Bloque de texto tipo noticia -->
+        <div class="news-content">
+            <h2 class="news-title">Vinicius Jr. ficha por xVeelo</h2>
+            <p class="news-description">El astro brasileño ha firmado el contrato que lo vincula al club hasta 2027. Fuentes cercanas al jugador confirman su rechazo al tecnico Edgar "Bigotudo" Santana así como al sevillano Roberto "SinRazon" Mollet.</p>
+        </div>
     </div>
-    </div>
-
-   
 
     <div id="video-container">
         <p id="tilt">Mamad y disfrutad sus mejores momentos</p>
