@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FutLloros</title> 
     <style>
-        
         body {
             margin: 0;
             padding: 0;
@@ -59,9 +58,7 @@
             font-size: 32px;
             text-align: center;
         }
-        *{
-            margin:10px;
-        }
+
         #image-wrapper {
             background-color: #1b1b20;
             padding: 10px;
@@ -102,6 +99,7 @@
             max-width: 800px; /* Tamaño máximo del video */
             display: block; /* Hacer que el video sea un bloque */
             margin: 20px auto; /* Margen superior e inferior */
+            object-fit: cover; /* Mantener la relación de aspecto */
         }
         
         #tilt {
@@ -195,14 +193,14 @@
         <!-- Bloque de texto tipo noticia -->
         <div class="news-content">
             <h2 class="news-title">Vinicius Jr. ficha por xVeelo</h2>
-            <p class="news-description">El astro brasileño ha firmado el contrato que lo vincula al club hasta 2027. Fuentes cercanas al jugador confirman su rechazo al tecnico Edgar "Bigotudo" Santana así como al sevillano Roberto "SinRazon" Mollet.</p>
+            <p class="news-description">El astro brasileño ha firmado el contrato que lo vincula al club hasta 2028. Fuentes cercanas al jugador confirman su rechazo al tecnico Edgar "Bigotudo" Santana así como al sevillano Roberto "SinRazon" Mollet.</p>
         </div>
     </div>
 
     <div id="video-container">
         <p id="tilt">Mamad y disfrutad sus mejores momentos</p>
         <!-- Video que se reproducirá automáticamente -->
-        <video id="video" controls autoplay muted>
+        <video id="video" controls autoplay muted playsinline>
             <source src="videoplayback.webm" type="video/webm"> <!-- Asegúrate de que el formato sea correcto -->
             Tu navegador no soporta el video.
         </video>
