@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital - Expertos en Debugging</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        header .logo span {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #9b5de5;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        header a:hover {
+            color: #f15bb5;
+            border-color: #f15bb5;
+            background-color: rgba(241, 91, 181, 0.2);
+        }
+        .hero {
+            text-align: center;
+            position: relative;
+            height: 90vh; /* Ajuste del alto */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Contenido más arriba */
+            align-items: center;
+            padding: 60px 20px 0; /* Más espacio arriba */
+        }
+        .hero img {
+            max-width: 300px;
+            margin-bottom: 40px; /* Más espacio bajo el logo */
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: #f5f5f5;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px; /* Más espacio debajo del texto */
+            color: #d9d9d9;
+        }
+        .button {
+            background-color: #000000;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            
+            
+        }
+        .button:hover {
+            color: #f15bb5;
+            border-color: #f15bb5;
+            background-color: rgba(241, 91, 181, 0.2);       
+            transform: scale(1.2);
+            transition: 0.3s;
+             }
+        .waves {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10vh; /* Más pequeñas para dejar más espacio arriba */
+        }
+        .waves path {
+            fill: #5c99a8;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="orbital_logo.png" alt="Logo Orbital">
+            <span>Orbital</span>
+        </div>
+        <nav>
+            <a href="quienes_somos.html">Quiénes Somos</a>
+            <a href="#trabaja-con-nosotros">Trabaja con Nosotros</a>
+            <a href="#iniciar-sesion">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="orbital_logo.png" alt="Logo Orbital">
+        <h1>Lleva tu código al siguiente nivel</h1>
+        <p>En Orbital, optimizamos y depuramos tu código para que brilles en el mundo del desarrollo.</p>
+        <a href="comienza.html" class="button">Comienza ahora</a>
+    </section>
+
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#9b5de5" d="M0,96L48,106.7C96,117,192,139,288,149.3C384,160,480,160,576,160C672,160,768,160,864,165.3C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</body>
+</html>
